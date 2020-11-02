@@ -8,7 +8,7 @@
                 <div class="col-12 col-md-6 col-lg-3 col-xl-3 footer-widget ftr-contact">
                     <h3 class="footer-heading">{{ __('home.contact_us') }}</h3>
                     <ul class="list-unstyled">
-                        <li><span><i class="fa fa-map-marker"></i></span>{{ setting('address') }}</li>
+                        <li><span><i class="fa fa-map-marker"></i></span>{{ setting(session('lang') . '_address') }}</li>
                         <li><span><i class="fa fa-phone"></i></span>{{ setting('phone') }}</li>
                         <li><span><i class="fa fa-envelope"></i></span>{{ setting('email') }}</li>
                     </ul>
@@ -88,13 +88,13 @@
                             <h4>on all flights booking</h4>
                             <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset
                                 pri.</p>
-                            <a href="#" class="btn btn-orange">Book Now</a>
+                            <a href="{{ url('trips') }}" class="btn btn-orange">{{ __('home.book_flight') }}</a>
                         </div><!-- end popup-ad-text -->
                     </div><!-- end columns -->
 
                     <div class="col-12 col-md-6">
                         <div class="popup-ad-img">
-                            <img src="images/about-content-2.png" class="img-fluid" />
+                            <img src="{{ asset('site/images/about-content-2.png') }}" class="img-fluid" />
                         </div><!-- end popup-ad-img -->
                     </div><!-- end columns -->
                 </div><!-- end row -->

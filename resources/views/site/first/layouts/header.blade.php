@@ -84,11 +84,6 @@
                         {{ __('home.our_services') }}
                     </a>
                 </li>
-                <li class="nav-item {{ setActive('projects') }}">
-                    <a href="{{ url('projects') }}" class="nav-link">
-                        {{ __('home.our_projects') }}
-                    </a>
-                </li>
                 <li class="nav-item {{ setActive('about') }}">
                     <a href="{{ url('about') }}" class="nav-link">
                         {{ __('home.about_us') }}

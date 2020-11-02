@@ -27,11 +27,13 @@ class FlightController extends Controller
     {
         $services = Service::orderBy('id', 'desc')->limit(8)->get();
         $aboutUs = About::first();
-        $flights = Flight::where('ar_start', 'like', "%$request->start%")->orWhere('en_start', 'like', "%$request->start%")
-            ->where('ar_destination', 'like', "%$request->destination%")->orWhere('en_destination', 'like', "%$request->destination%")
-            ->where('take_off', Carbon::parse($request->take_off)->format('Y-m-d'))
-            ->where('landing', Carbon::parse($request->landing)->format('Y-m-d'))
-            ->where('adults', $request->adults)
+        $flights = Flight::where('ar_start', 'like', "%$request->start%")
+            ->orWhere('en_start', 'like', "%$request->start%")
+            ->where('ar_destination', 'like', "%$request->destination%")
+            ->orWhere('en_destination', 'like', "%$request->destination%")
+            ->orWhere('take_off', Carbon::parse($request->take_off)->format('Y-m-d'))
+            ->orWhere('landing', Carbon::parse($request->landing)->format('Y-m-d'))
+            ->orWhere('adults', $request->adults)
             ->paginate(12);
         return view('site.first.flight_search_result',
             compact('flights', 'services',

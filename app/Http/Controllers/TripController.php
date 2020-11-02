@@ -27,9 +27,11 @@ class TripController extends Controller
     {
         $services = Service::orderBy('id', 'desc')->limit(8)->get();
         $aboutUs = About::first();
-        $flights = Trip::where('ar_start', 'like', "%$request->start%")->orWhere('en_start', 'like', "%$request->start%")
-            ->where('ar_destination', 'like', "%$request->destination%")->orWhere('en_destination', 'like', "%$request->destination%")
-            ->where('start_at', Carbon::parse($request->take_off)->format('Y-m-d'))
+        $flights = Trip::where('ar_start', 'like', "%$request->start%")
+            ->orWhere('en_start', 'like', "%$request->start%")
+            ->where('ar_destination', 'like', "%$request->destination%")
+            ->orWhere('en_destination', 'like', "%$request->destination%")
+            ->orWhere('start_at', Carbon::parse($request->take_off)->format('Y-m-d'))
             ->whereBetween('price', [$request->price_from, $request->price_to])
             ->paginate(8);
         return view('site.first.trip_search_result',

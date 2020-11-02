@@ -83,7 +83,7 @@
                             <div class="list-content">
                                 <div class="main-img list-img t-list-img">
                                     <a href="{{ url('trip/' . $trip->id . '/' . $trip->$title) }}">
-                                        <img src="{{ $trip->trip_image }}" class="img-fluid" alt="tour-img" />
+                                        <img src="{{ $trip->trip_image }}" class="img-fluid" alt="tour-img" style="width: 100% !important;"/>
                                     </a>
                                     <div class="main-mask">
                                         <ul class="list-unstyled list-inline offer-price-1">

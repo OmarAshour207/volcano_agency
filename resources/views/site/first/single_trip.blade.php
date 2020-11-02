@@ -141,10 +141,11 @@
                             <div class="col-12 col-md-6 col-lg-12">
                                 <div class="side-bar-block support-block">
                                     <h3>{{ __('home.for_help') }}</h3>
-                                    <p> {{ setting('address') }} </p>
+                                    <p> {{ setting(session('lang') . '_address') }} </p>
                                     <div class="support-contact">
                                         <span><i class="fa fa-phone"></i></span>
                                         <p>{{ __('home.phone') }}</p>
+                                        <p>{{ setting('phone') }}</p>
                                     </div><!-- end support-contact -->
                                 </div><!-- end side-bar-block -->
                             </div><!-- end columns -->

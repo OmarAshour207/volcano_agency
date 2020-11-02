@@ -128,7 +128,7 @@
 
                                     <div class="list-info t-list-info">
                                         <h3 class="block-title"><a href="{{ url('offer/' . $offer->id) }}">{{ $offer->hotel->$name }}</a></h3>
-                                        <p class="block-minor">{{ $offer->hotel->$name }}</p>
+                                        <p class="block-minor">{{ $offer->hotel->$desc }}</p>
                                         <p> {{ substr($offer->hotel->$desc, 0, 70) }} </p>
                                         <a href="{{ url('offer/' . $offer->id) }}" class="btn btn-orange btn-lg">
                                             {{ __('home.learn_more') }}
