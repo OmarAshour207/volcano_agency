@@ -8,16 +8,16 @@
             <ul class="slides">
 
                 @foreach($sliders as $index => $slider)
-                    <li class="item-{{ $index+1 }}" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{ $slider->slider_image }}) 50% 0%;background-size:cover;height:100%;">
-                    <div class=" meta">
-                        <div class="container">
-                            @php
-                                $title = session('lang') . '_title';
-                            @endphp
-                            {!! $slider->$title !!}
-                            <a href="{{ url('trips') }}" class="btn btn-default">{{ __('home.view_more') }}</a>
-                        </div><!-- end container -->
-                    </div><!-- end meta -->
+                    <li class="item-2 {{ $index == 0 ? 'clone' : '' }}" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{ $slider->slider_image }}) 50% 0%;background-size:cover;height:100%;">
+                        <div class=" meta">
+                            <div class="container">
+                                @php
+                                    $title = session('lang') . '_title';
+                                @endphp
+                                {!! $slider->$title !!}
+                                <a href="{{ url('trips') }}" class="btn btn-default">{{ __('home.view_more') }}</a>
+                            </div><!-- end container -->
+                        </div><!-- end meta -->
                     </li><!-- end item-2 -->
                     @if($index == 1)
                         @break
@@ -384,7 +384,7 @@
                             <div class="main-block tour-block">
                                 <div class="main-img">
                                     <a href="#">
-                                        <img src="{{ $trip->trip_image }}" class="img-fluid" alt="tour-img" />
+                                        <img src="{{ $trip->trip_image }}" class="img-fluid" alt="tour-img" style="width: 100% !important;"/>
                                     </a>
                                 </div><!-- end offer-img -->
 
@@ -508,16 +508,16 @@
                                                 <li>
                                                     <span><i class="fa fa-plane"></i></span>
                                                     <span class="date">
-                                                        {{ date('M,d-Y', strtotime($flight->landing)) }}
-                                                    </span>
-                                                    ( {{ date('g:i A', strtotime($flight->landing_time)) }} )
+                                                        {{ date('M,d-Y', strtotime($flight->take_off)) }}
+                                                        </span>
+                                                    ({{ date('g:i A', strtotime($flight->landing_time)) }})
                                                 </li>
                                                 <li>
                                                     <span><i class="fa fa-plane"></i></span>
                                                     <span class="date">
-                                                        {{ date('M,d-Y', strtotime($flight->take_off)) }}
-                                                        </span>
-                                                    ({{ date('g:i A', strtotime($flight->landing_time)) }})
+                                                        {{ date('M,d-Y', strtotime($flight->landing)) }}
+                                                    </span>
+                                                    ( {{ date('g:i A', strtotime($flight->landing_time)) }} )
                                                 </li>
                                             </ul>
                                         </div><!-- end flight-timing -->
@@ -559,8 +559,8 @@
                                 </div><!-- end h-icon -->
 
                                 <div class="h-text">
-                                    <span class="numbers">2496</span>
-                                    <p>Outstanding Tours</p>
+                                    <span class="numbers">{{ $flights_count }}</span>
+                                    <p>{{ __('home.flight') }}</p>
                                 </div><!-- end h-text -->
                             </div><!-- end highlight-box -->
                         </div><!-- end columns -->
@@ -568,12 +568,12 @@
                         <div class="col-12 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center">
                             <div class="highlight-box">
                                 <div class="h-icon">
-                                    <span><i class="fa fa-ship"></i></span>
+                                    <span><i class="fa fa-building-o"></i></span>
                                 </div><!-- end h-icon -->
 
                                 <div class="h-text cruise">
-                                    <span class="numbers">1906</span>
-                                    <p>Worldwide Cruise</p>
+                                    <span class="numbers">{{ $hotels_count }}</span>
+                                    <p> {{ __('home.hotel') }} </p>
                                 </div><!-- end h-text -->
                             </div><!-- end highlight-box -->
                         </div><!-- end columns -->
@@ -585,8 +585,8 @@
                                 </div><!-- end h-icon -->
 
                                 <div class="h-text taxi">
-                                    <span class="numbers">2033</span>
-                                    <p>Luxury Car Booking</p>
+                                    <span class="numbers">{{ $trips_count }}</span>
+                                    <p>{{ __('admin.trip') }}</p>
                                 </div><!-- end h-text -->
                             </div><!-- end highlight-box -->
                         </div><!-- end columns -->
@@ -615,7 +615,7 @@
                     <div class="carousel slide" data-ride="carousel" id="quote-carousel">
                         <div class="carousel-inner text-center">
                             @foreach($testimonials as $index => $testimonial)
-                            <div class="carousel-item active">
+                            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
                                 @php
                                     $desc = session('lang') . '_description';
                                     $name = session('lang') . '_name';

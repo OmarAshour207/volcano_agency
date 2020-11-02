@@ -32,6 +32,7 @@ Route::get('hotels/search', 'HotelController@showSearchHotels');
 Route::get('offer/{id}', 'HotelController@showOffer');
 Route::post('hotel/book', 'HotelController@bookHotel');
 
+Route::match(['get', 'post'], 'webhook', 'MessengerController@index');
 
 // Admin ROUTES
 Auth::routes(['register' => false]);

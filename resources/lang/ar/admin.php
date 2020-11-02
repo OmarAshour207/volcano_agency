@@ -130,7 +130,7 @@ return [
     'viewed'                => 'تمت المشاهده',
     'icon'                  => 'الايقونه',
     'categories'            => 'الفئات',
-    'hotels'                => 'الفتادق',
+    'hotels'                => 'الفنادق',
     'choose_stars'          => 'أختر عدد النجوم',
     'star'                  => 'نجمه',
     'stars_number'          => 'عدد النجوم',
@@ -153,7 +153,7 @@ return [
     'take_off'              => 'الاقلاع',
     'landing_time'          => 'وقت الهبوط',
     'landing'               => 'الهبوط',
-    'flights'               => 'الرحلات',
+    'flights'               => 'الطيران',
     'choose_ways_number'    => 'أختر عدد الطرق',
     'one_way'               => 'ذهاب',
     'two_way'               => 'ذهاب واياب',
@@ -174,6 +174,6 @@ return [
     'book_flight'           => 'طلب خجز رحله طيران',
     'book_trip'             => 'طلب حجز رحله',
     'book_hotel'            => 'طلب حجز فندق',
-
+    'color'                 => 'اللون'
 
 ];

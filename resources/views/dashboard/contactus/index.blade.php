@@ -56,7 +56,7 @@
                             <td style="width: 120px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {!! substr($contact->ar_description, 0, 20)  !!}
+                                        {!! mb_substr($contact->ar_description, 0, 20)  !!}
                                     </div>
                                 </div>
                             </td>

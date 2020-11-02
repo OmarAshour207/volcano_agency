@@ -50,7 +50,7 @@
 
                 <li class="sidebar-menu-item">
                     <a class="sidebar-menu-button" href="{{ route('flights.index') }}">
-                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">slideshow</i>
+                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">flight_takeoff</i>
                         <span class="sidebar-menu-text"> {{ __('admin.flights') }} </span>
                     </a>
                 </li>

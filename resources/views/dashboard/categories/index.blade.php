@@ -33,11 +33,11 @@
                                 </div>
                             </th>
 
-                            <th style="width: 30px;" > {{ trans('admin.id') }} </th>
+                            <th style="width: 30px;"> {{ trans('admin.id') }} </th>
                             <th style="width: 40px;"> {{ trans('admin.ar_name') }} </th>
                             <th style="width: 40px;"> {{ trans('admin.en_name') }} </th>
                             <th style="width: 40px;"> {{ trans('admin.icon') }} </th>
-                            <th style="width: 30px;" > {{ trans('admin.action') }} </th>
+                            <th style="width: 30px;"> {{ trans('admin.action') }} </th>
                         </tr>
                         </thead>
                         <tbody class="list" id="companies">
@@ -58,7 +58,7 @@
                                     <td style="width: 40px;">
                                         <div class="d-flex align-items-center">
                                             <div class="d-flex align-items-center">
-                                                {{ $category->ar_name }}
+                                                {{ mb_substr($category->ar_name, 0, 20) }}
                                             </div>
                                         </div>
                                     </td>
@@ -66,7 +66,7 @@
                                     <td style="width: 40px;">
                                         <div class="d-flex align-items-center">
                                             <div class="d-flex align-items-center">
-                                                {{ $category->en_name }}
+                                                {{ substr($category->en_name, 0, 20) }}
                                             </div>
                                         </div>
                                     </td>

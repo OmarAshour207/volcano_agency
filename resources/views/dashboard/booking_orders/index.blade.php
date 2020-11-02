@@ -128,7 +128,7 @@
                             <td style="width:120px" class="text-center">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $booking_order->address }}
+                                        {{ substr($booking_order->address, 0, 20) }}
                                     </div>
                                 </div>
                             </td>

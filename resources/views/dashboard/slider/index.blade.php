@@ -38,7 +38,7 @@
                             <th style="width: 120px;" > {{ trans('admin.en_title') }} </th>
                             <th style="width: 120px;" > {{ trans('admin.ar_description') }} </th>
                             <th style="width: 120px;" > {{ trans('admin.en_description') }} </th>
-                            <th style="width: 120px;" >{{ trans('admin.image') }}</th>
+                            <th style="width: 120px;" > {{ trans('admin.image') }}</th>
                             <th style="width: 30px;" > {{ trans('admin.action') }} </th>
                         </tr>
                         </thead>
@@ -59,7 +59,7 @@
                             <td style="width: 120px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {!! substr($slider->ar_title, 0, 20)  !!}
+                                        {!! mb_substr($slider->ar_title, 0, 20)  !!}
                                     </div>
                                 </div>
                             </td>
@@ -74,7 +74,7 @@
                             <td style="width: 120px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {!! substr($slider->ar_description, 0, 20)  !!}
+                                        {!! mb_substr($slider->ar_description, 0, 20)  !!}
                                     </div>
                                 </div>
                             </td>

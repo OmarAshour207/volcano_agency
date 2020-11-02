@@ -34,11 +34,11 @@
                             </th>
 
                             <th style="width: 30px;" > {{ trans('admin.id') }} </th>
-                            <th style="width: 40px;"> {{ trans('admin.ar_title') }} </th>
-                            <th style="width: 40px;"> {{ trans('admin.en_title') }} </th>
+                            <th style="width: 40px;" > {{ trans('admin.ar_title') }} </th>
+                            <th style="width: 40px;" > {{ trans('admin.en_title') }} </th>
                             <th style="width: 120px;" > {{ trans('admin.ar_description') }} </th>
                             <th style="width: 120px;" > {{ trans('admin.en_description') }} </th>
-                            <th style="width: 120px;" >{{ trans('admin.image') }}</th>
+                            <th style="width: 120px;" > {{ trans('admin.image') }}</th>
                             <th style="width: 30px;" > {{ trans('admin.action') }} </th>
                         </tr>
                         </thead>
@@ -59,14 +59,14 @@
                             <td style="width: 40px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $service->ar_title }}
+                                        {{ mb_substr($service->ar_title, 0, 20) }}
                                     </div>
                                 </div>
                             </td>
                             <td style="width: 40px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $service->en_title }}
+                                        {{ substr($service->en_title, 0, 20) }}
                                     </div>
                                 </div>
                             </td>
@@ -74,14 +74,14 @@
                             <td style="width: 120px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $service->ar_description }}
+                                        {{ mb_substr($service->ar_description, 0, 20) }}
                                     </div>
                                 </div>
                             </td>
                             <td style="width: 120px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $service->en_description }}
+                                        {{ substr($service->en_description, 0, 20) }}
                                     </div>
                                 </div>
                             </td>

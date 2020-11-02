@@ -8,7 +8,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item"><a href="{{ url('admin/dashboard') }}"><i class="material-icons icon-20pt">home</i> {{ trans('admin.home') }} </a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ trans('admin.team_members') }}</li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ trans('admin.projects') }}</li>
                         </ol>
                     </nav>
                     <h1 class="m-0"> {{ trans('admin.projects') }} </h1>
@@ -34,11 +34,11 @@
                             </th>
 
                             <th style="width: 30px;" > {{ trans('admin.id') }} </th>
-                            <th style="width: 40px;"> {{ trans('admin.ar_name') }} </th>
-                            <th style="width: 40px;"> {{ trans('admin.en_name') }} </th>
+                            <th style="width: 40px;" > {{ trans('admin.ar_name') }} </th>
+                            <th style="width: 40px;" > {{ trans('admin.en_name') }} </th>
                             <th style="width: 120px;" > {{ trans('admin.ar_description') }} </th>
                             <th style="width: 120px;" > {{ trans('admin.en_description') }} </th>
-                            <th style="width: 120px;" >{{ trans('admin.image') }}</th>
+                            <th style="width: 120px;" > {{ trans('admin.image') }}</th>
                             <th style="width: 30px;" > {{ trans('admin.action') }} </th>
                         </tr>
                         </thead>
@@ -59,7 +59,7 @@
                             <td style="width: 40px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $project->ar_title }}
+                                        {{ mb_substr($project->ar_title, 0, 20) }}
                                     </div>
                                 </div>
                             </td>
@@ -67,7 +67,7 @@
                             <td style="width: 40px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $project->en_title }}
+                                        {{ substr($project->en_title, 0, 20) }}
                                     </div>
                                 </div>
                             </td>
@@ -75,7 +75,7 @@
                             <td style="width: 120px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ substr($project->ar_description, 0, 20) }}
+                                        {{ mb_substr($project->ar_description, 0, 20) }}
                                     </div>
                                 </div>
                             </td>

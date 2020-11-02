@@ -33,14 +33,14 @@
                                 </div>
                             </th>
 
-                            <th style="width: 30px;" > {{ trans('admin.id') }} </th>
+                            <th style="width: 30px;"> {{ trans('admin.id') }} </th>
                             <th style="width: 40px;"> {{ trans('admin.ar_name') }} </th>
                             <th style="width: 40px;"> {{ trans('admin.en_name') }} </th>
-                            <th style="width: 120px;" > {{ trans('admin.ar_description') }} </th>
-                            <th style="width: 120px;" > {{ trans('admin.en_description') }} </th>
+                            <th style="width: 120px;"> {{ trans('admin.ar_description') }} </th>
+                            <th style="width: 120px;"> {{ trans('admin.en_description') }} </th>
                             <th style="width: 40px;"> {{ trans('admin.stars_number') }} </th>
-                            <th style="width: 120px;" >{{ trans('admin.image') }}</th>
-                            <th style="width: 30px;" > {{ trans('admin.action') }} </th>
+                            <th style="width: 120px;"> {{ trans('admin.image') }}</th>
+                            <th style="width: 30px;"> {{ trans('admin.action') }} </th>
                         </tr>
                         </thead>
                         <tbody class="list" id="companies">
@@ -61,14 +61,14 @@
                             <td style="width: 40px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $hotel->ar_name }}
+                                        {{ mb_substr($hotel->ar_name, 0, 20) }}
                                     </div>
                                 </div>
                             </td>
                             <td style="width: 40px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $hotel->en_name }}
+                                        {{ substr($hotel->en_name, 0, 20) }}
                                     </div>
                                 </div>
                             </td>
@@ -76,7 +76,7 @@
                             <td style="width: 120px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {!! substr($hotel->ar_description, 0, 20)  !!}
+                                        {!! mb_substr($hotel->ar_description, 0, 20)  !!}
                                     </div>
                                 </div>
                             </td>

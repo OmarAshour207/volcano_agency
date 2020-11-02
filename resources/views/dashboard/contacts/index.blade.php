@@ -33,10 +33,10 @@
                             </th>
 
                             <th style="width: 30px;" > # </th>
-                            <th style="width: 40px;"> {{ trans('admin.name') }} </th>
+                            <th style="width: 40px;" > {{ trans('admin.name') }} </th>
                             <th style="width: 30px;" > {{ trans('admin.email') }} </th>
-                            <th style="width: 50px;" >{{ trans('admin.phone') }}</th>
-                            <th style="width: 120px;" >{{ trans('admin.message') }}</th>
+                            <th style="width: 50px;" > {{ trans('admin.phone') }}</th>
+                            <th style="width: 120px;" > {{ trans('admin.message') }}</th>
                             <th style="width: 30px;" > {{ trans('admin.action') }} </th>
                         </tr>
                         </thead>
@@ -81,7 +81,7 @@
                             <td style="width:120px" class="text-center">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $contact->message }}
+                                        {{ substr($contact->message, 0, 20) }}
                                     </div>
                                 </div>
                             </td>

@@ -33,7 +33,7 @@
                                 </div>
                             </th>
 
-                            <th style="width: 30px;" > {{ trans('admin.id') }} </th>
+                            <th style="width: 30px;"> {{ trans('admin.id') }} </th>
                             <th style="width: 40px;"> {{ trans('admin.hotel_name') }} </th>
                             <th style="width: 40px;"> {{ trans('admin.price') }} </th>
                             <th style="width: 40px;"> {{ trans('admin.check_in') }} </th>
@@ -62,7 +62,7 @@
                             <td style="width: 40px;">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{ $offer->hotel->ar_name }}
+                                        {{ mb_substr($offer->hotel->ar_name, 0, 20) }}
                                     </div>
                                 </div>
                             </td>

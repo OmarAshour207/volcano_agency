@@ -31,7 +31,6 @@ class HomeController extends Controller
 
     public function HomePage()
     {
-//        dd(\request()->segment(1));
         $this->checkVisitor();
 
         session('lang') ?? session()->put('lang', app()->getLocale());
@@ -56,6 +55,10 @@ class HomeController extends Controller
         $projects_count = Project::all()->count();
         $team_count = TeamMember::all()->count();
 
+        $flights_count = Flight::all()->count();
+        $hotels_count = Hotel::all()->count();
+        $trips_count = Trip::all()->count();
+
 
         return view('site.' . $themeName . '.home',
                     compact('page_filter', 'sliders',
@@ -64,7 +67,9 @@ class HomeController extends Controller
                             'testimonials', 'blogs',
                             'services_count', 'projects_count',
                             'team_count', 'offers',
-                            'flights', 'trips', 'hotels'));
+                            'flights', 'trips', 'hotels',
+                            'flights_count', 'hotels_count',
+                            'trips_count'));
     }
 
     public function checkVisitor()

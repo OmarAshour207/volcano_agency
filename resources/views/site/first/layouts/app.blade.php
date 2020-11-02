@@ -6,21 +6,20 @@
     @endphp
 
 
+    <!-- PAGE TITLE HERE -->
+    <title> {{ setting('website_title') }} </title>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <meta name="keywords" content="{{ setting('meta_keywords') }}" />
     <meta name="author" content="{{ setting('meta_author') }}" />
     <meta name="description" content="{{ setting('meta_description') }}" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" href="{{ asset('site/images/favicon.ico') }}" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('site/images/favicon.png') }}" />
+    <link rel="icon" href="{{ asset('site/images/favicon.png') }}" type="image/x-icon" />
 
-    <!-- PAGE TITLE HERE -->
-    <title> {{ setting('title') }} </title>
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap Stylesheet -->
     <link rel="stylesheet" href="{{ asset('site/css/bootstrap-rtl-4.4.1.min.css') }}">

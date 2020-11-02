@@ -100,5 +100,5 @@ return [
     'destination_place'     => 'Destination',
     'desired_flight'        => 'Desired Trip & Flight',
     'perfect_place'         => 'A perfect place for searching your',
-
+    'view_more'             => 'View More',
 ];

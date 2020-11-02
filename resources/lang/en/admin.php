@@ -171,6 +171,6 @@ return [
     'book_flight'           => 'Book Flight Order',
     'book_trip'             => 'Book Trip Order',
     'book_hotel'            => 'Book Hotel Order',
-    
+    'color'                 => 'Color',
 
 ];

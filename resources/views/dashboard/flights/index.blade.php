@@ -65,30 +65,30 @@
 
                                     <td style="width: 40px;">
                                         <div class="d-flex align-items-center">
-                                            <div class="d-flex align-items-center">
-                                                {{ $flight->ar_start }}
+                                            <div class="d-flex align-items-center btn btn-success">
+                                                {{ mb_substr($flight->ar_start, 0, 20) }}
                                             </div>
                                         </div>
                                     </td>
                                     <td style="width: 40px;">
                                         <div class="d-flex align-items-center">
-                                            <div class="d-flex align-items-center">
-                                                {{ $flight->en_start }}
+                                            <div class="d-flex align-items-center btn btn-success">
+                                                {{ substr($flight->en_start, 0, 20) }}
                                             </div>
                                         </div>
                                     </td>
 
                                     <td style="width: 40px;">
                                         <div class="d-flex align-items-center">
-                                            <div class="d-flex align-items-center">
-                                                {{ $flight->ar_destination }}
+                                            <div class="d-flex align-items-center btn btn-danger">
+                                                {{ mb_substr($flight->ar_destination, 0, 20) }}
                                             </div>
                                         </div>
                                     </td>
                                     <td style="width: 40px;">
                                         <div class="d-flex align-items-center">
-                                            <div class="d-flex align-items-center">
-                                                {{ $flight->en_destination }}
+                                            <div class="d-flex align-items-center btn btn-danger">
+                                                {{ substr($flight->en_destination, 0, 20) }}
                                             </div>
                                         </div>
                                     </td>
