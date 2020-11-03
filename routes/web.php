@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Messenger Chatbot
+Route::match(['get', 'post'], 'webhook', 'MessengerController@index');
+
+Route::get('test', 'MessengerController@test');
+
 Route::get('/', 'HomeController@HomePage');
 Route::get('/about', 'HomeController@aboutPage');
 

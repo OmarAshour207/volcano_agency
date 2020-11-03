@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1257f663-f64a-495c-8f7d-aacfd2c39e22" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FlightController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FlightController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TripController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TripController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotel.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/first/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/first/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/first/hotel_search_result.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/first/hotel_search_result.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/first/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/first/layouts/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/first/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/first/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/first/single_trip.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/first/single_trip.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/first/trip_search_result.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/first/trip_search_result.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessengerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessengerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +138,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/ar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -156,14 +149,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\hotel\resources\views\site\first" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hotel\resources\lang\ar" />
       <recent name="C:\xampp\htdocs\hotel\resources\views\dashboard\booking_orders" />
       <recent name="C:\xampp\htdocs\hotel\resources\views\dashboard\trips" />
       <recent name="C:\xampp\htdocs\hotel\resources\views\dashboard\flights" />
       <recent name="C:\xampp\htdocs\hotel\resources\views\dashboard\hotel-offer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hotel\resources\views\site\first" />
     </key>
   </component>
   <component name="RunManager">
@@ -192,7 +186,7 @@
       <workItem from="1600692881340" duration="156000" />
       <workItem from="1600707945556" duration="455000" />
       <workItem from="1600866648617" duration="696000" />
-      <workItem from="1604315377894" duration="10608000" />
+      <workItem from="1604315377894" duration="18174000" />
     </task>
     <servers />
   </component>
@@ -212,10 +206,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="188" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1599658180227" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1600692998674">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1604407420276">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1600692998674" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604407420276" />
     <state x="604" y="357" key="NewPhpFileDialog" timestamp="1599661318477">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
